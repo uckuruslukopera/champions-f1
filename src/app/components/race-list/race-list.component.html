@@ -1,0 +1,9 @@
+<ul class="c-race-list__wrapper list-group">
+  <li *ngFor="let race of races"
+      (click)="onRaceSelected(race)"
+      class="list-group-item d-flex justify-content-between align-items-center c-race-list__item"
+      [ngClass]="{'c-race-list__item--selected': race?.round === selectedRace?.round}">
+      {{ race?.raceName }}
+    <span class="badge badge-info badge-pill">{{ race?.date  | date:'MMM d' }}</span>
+  </li>
+</ul>

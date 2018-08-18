@@ -1,0 +1,9 @@
+<select [(ngModel)]="value" 
+        [disabled]="isDisabled"
+        (ngModelChange)="changeHandler($event)">
+<option *ngFor="let option of options; let i = index;"
+        [attr.selected]="value == option.value ? true : null"
+        [ngValue]="option.value"
+        [disabled]="option.disabled || option.value === '-1'">{{option.text}}</option>
+</select>
+

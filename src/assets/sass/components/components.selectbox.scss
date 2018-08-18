@@ -1,0 +1,19 @@
+.c-selectbox {
+    select {
+        color: darkslategray;
+        border-radius: 25px;
+        padding: 5px 9px;
+        &:hover,&:focus,&:active,&:visited {
+            outline: none;
+        }
+    }
+    &--lg {
+        select {
+            padding: 10px 18px;
+            color: darkslategray;
+        }
+    }
+    option {
+        outline: none;
+    }
+}

@@ -1,0 +1,44 @@
+.c-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 15px 40px;
+    justify-content: space-between;
+    background-color: #fafafa;
+    @media screen and (max-width: 768px) {
+        justify-content: center;
+    }
+    &__left {
+        h1 {
+            display: inline;
+            font-size: 24px;
+            &:hover, &:active, &:focus {
+                cursor: pointer;
+                outline: none;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            margin-bottom: 10px;
+        }
+    }
+    &__middle {
+        display: none;
+    }
+    &__right {
+        padding: 5px 0;
+        a {
+            color: firebrick;
+        }
+    }
+    &--with-select {
+        .c-header__middle {
+            display: inline;
+            .c-selectbox {
+                margin-left: 1em;
+            }
+        }
+    }
+}
+
+

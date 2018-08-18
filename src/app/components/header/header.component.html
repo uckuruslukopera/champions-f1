@@ -1,0 +1,16 @@
+<div class="c-header__left">
+    <h1 routerLink="/home">F1 Champions</h1>
+</div>
+<div class="c-header__middle">
+    <span class="d-none d-md-none d-lg-inline">Select a year to display races: </span>
+    <app-selectbox [options]="yearOptions" [value]="selectedYear" (changeEvent)="onYearSelected($event)"></app-selectbox>
+</div>
+<div class="c-header__right hidden-md">
+    <span class="d-none d-sm-none d-md-inline">
+        <a href="https://github.com/uckuruslukopera/champions-f1" target="blank">View on GitHub</a>
+    </span>
+</div>
+
+
+
+

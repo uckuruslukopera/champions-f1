@@ -1,0 +1,17 @@
+.r-home {
+    background-image: url(assets/images/bg/car-racing-1404047_1920.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 60px);
+    min-height: 400px;
+    width: 100vw;
+    &__caption {
+        position: absolute;
+        left: 0;
+        top: 200px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+    }
+}

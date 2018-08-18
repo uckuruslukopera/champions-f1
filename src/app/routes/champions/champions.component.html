@@ -1,0 +1,16 @@
+<div class="r-champions__content row">
+    <div class="r-champions__result-list col-sm-12 col-md-8">
+        <div class="r-champions__result-list__label">RACE RESULTS</div>
+        <div *ngIf="!raceResults?.length" class="r-champions__result-list__no-data">
+            <i class="far fa-flag"></i>
+            <span>Select a race to display results</span>
+        </div>
+        <app-result-list *ngIf="raceResults?.length" [results]="raceResults"></app-result-list>
+        <app-pagination *ngIf="raceResults?.length"  [count]="resultCount" [currentPage]="resultCurrentPage" [pageSize]="pageSize" (pageSelected)="resultPageSelected($event)"></app-pagination>
+    </div>
+    <div class="r-champions__race-list col-sm-12 col-md-4">
+        <div class="r-champions__race-list__label">Select a race to view the results</div>
+        <app-race-list [races]="races" (raceSelectedEvent)="getRaceResults($event)"></app-race-list>
+        <app-pagination [count]="raceCount" [currentPage]="raceCurrentPage" [pageSize]="pageSize" (pageSelected)="racePageSelected($event)"></app-pagination>
+    </div>
+</div>

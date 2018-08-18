@@ -1,0 +1,30 @@
+<div class="c-result-list__wrapper">
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Fastest</th>
+            <th scope="col">Constructor</th>
+            <th class="d-none d-xs-non d-sm-block" scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let result of results" class="c-result-list__item" [ngClass]="{'c-result-list__item--champion': isDriverWorldChampion(result?.Driver)}">
+                <th scope="row">{{ result?.position }}</th>
+                <td>
+                    <a href="{{ result?.Driver?.url }}" target="blank">
+                        {{ result?.Driver?.givenName }} {{ result?.Driver?.familyName }} 
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <i class="fas fa-crown" data-toggle="tooltip" [title]="championToolTipText"></i>
+                </td>
+                <td>{{ result?.FastestLap?.AverageSpeed?.speed }} {{ result?.FastestLap?.AverageSpeed?.units }} - {{ result?.FastestLap?.Time?.time }}</td>
+                <td><a href="{{ result?.Constructor?.url }}" target="blank">{{ result?.Constructor?.name }} <i class="fas fa-external-link-alt"></i></a></td>
+                <td class="d-none d-xs-none d-sm-block">{{ result?.status }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+

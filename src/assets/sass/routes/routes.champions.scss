@@ -1,0 +1,32 @@
+.r-champions {
+    height: calc(100vh - 60px);
+    min-height: 400px;
+    width: 100%;
+    &__content {
+        height: auto;
+    }
+    &__race-list {
+        padding: 20px 40px 30px;
+        border-left: 1px solid gainsboro;
+        &__label {
+            font-weight: 600;
+        }
+    }
+    &__result-list {
+        padding: 20px 40px 30px;
+        &__label {
+            font-weight: 600;
+            text-align: center;
+        }
+        &__no-data {
+            text-align: center;
+            margin-top: 15%;
+            color: gainsboro;
+            i {
+                font-size: 120px;
+                display: block;
+                margin-bottom: 20px;;
+            }
+        }
+    }
+}

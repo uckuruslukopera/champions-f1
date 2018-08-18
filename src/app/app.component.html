@@ -1,0 +1,11 @@
+<div class="r-index container-fluid">
+  <div class="r-index__header row">
+    <app-header></app-header>
+  </div>
+  <div class="r-index__content row">
+    <router-outlet></router-outlet>
+  </div>
+  <div *ngIf="isLoading" class="r-index__loading">
+      <img src="assets/images/gifs/loading.gif"/>
+  </div>
+</div>

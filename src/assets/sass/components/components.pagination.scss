@@ -1,0 +1,16 @@
+.c-pagination {
+    display: flex;
+    justify-content: center;
+    li {
+        &:focus {
+            outline: none;
+        }
+    }
+    a {
+        color: firebrick;
+        &:hover,&:focus,&:active,&:visited {
+            color: firebrick;
+            border: none;
+        }
+    }
+}
