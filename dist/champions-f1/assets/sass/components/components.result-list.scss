@@ -1,0 +1,27 @@
+.c-result-list {
+    &__wrapper {
+        padding: 20px 0;
+    }
+    &__item {
+        td{
+            a {
+                color: firebrick;
+            }
+            i {
+                color: gainsboro;
+                font-size: 12px;
+            }
+        }
+        .fa-crown {
+            margin-left: 6px;
+            display: none;
+            font-size: 16px;
+            color: goldenrod;
+        }
+        &--champion {
+            .fa-crown {
+                display: inline;
+            }
+        }
+    }
+}

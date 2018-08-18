@@ -1,0 +1,27 @@
+.c-race-list {
+    &__wrapper {
+        padding: 20px 0;
+    }
+    &__item {
+        span {
+            background-color: firebrick;
+        }
+        &:hover,&:focus,&:active {
+            cursor: pointer;
+            background-color: firebrick;
+            color: #fff;
+            span {
+                color: #000;
+                background-color: #fff
+            }
+        }
+        &--selected {
+            background-color: firebrick;
+            color: #fff;
+            span {
+                color: #000;
+                background-color: #fff
+            }
+        }
+    }
+}
