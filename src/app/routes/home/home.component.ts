@@ -21,7 +21,6 @@ export class HomeComponent implements OnInit {
   }
 
   onYearSelected(e) {
-    console.log(e);
     this.router.navigate(['/champions', e]);
   }
 
