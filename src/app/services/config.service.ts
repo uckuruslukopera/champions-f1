@@ -20,7 +20,7 @@ export class ConfigService {
     let yearOptions = years.map((y) => {
       return {value: y, text: y.toString(), disabled: false };
     });
-    yearOptions = [{value: -1, text: 'Please select a year', disabled: true}, ...yearOptions];
+    yearOptions = [{value: -1, text: 'Select a year', disabled: true}, ...yearOptions];
     return yearOptions;
   }
 

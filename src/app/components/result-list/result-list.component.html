@@ -4,9 +4,9 @@
             <tr>
             <th scope="col">#</th>
             <th scope="col">Name</th>
-            <th scope="col">Fastest</th>
+            <th class="d-none d-xs-none d-sm-block" scope="col">Fastest</th>
             <th scope="col">Constructor</th>
-            <th class="d-none d-xs-non d-sm-block" scope="col">Status</th>
+            <th class="d-none d-xs-none d-sm-block" scope="col">Status</th>
             </tr>
         </thead>
         <tbody>
@@ -19,7 +19,7 @@
                     </a>
                     <i class="fas fa-crown" data-toggle="tooltip" [title]="championToolTipText"></i>
                 </td>
-                <td>{{ result?.FastestLap?.AverageSpeed?.speed }} {{ result?.FastestLap?.AverageSpeed?.units }} - {{ result?.FastestLap?.Time?.time }}</td>
+                <td class="d-none d-xs-none d-sm-block">{{ result?.FastestLap?.AverageSpeed?.speed }} {{ result?.FastestLap?.AverageSpeed?.units }} - {{ result?.FastestLap?.Time?.time }}</td>
                 <td><a href="{{ result?.Constructor?.url }}" target="blank">{{ result?.Constructor?.name }} <i class="fas fa-external-link-alt"></i></a></td>
                 <td class="d-none d-xs-none d-sm-block">{{ result?.status }}</td>
             </tr>
